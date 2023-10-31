@@ -56,4 +56,27 @@ from django.urls import path
 <!-- views 모듈 불러오기 -->
 from app_intro import views 
 
-<!-- urlpatterns에 path('index/', vi
+<!-- urlpatterns에 path('index/', views.index) 추가 -->
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    # path('url 주소/', 불러올 함수)
+    path('index/', views.index),
+]
+```
+
+9. `views.py` 수정
+```
+from django.shortcuts import render
+
+
+# index 함수 만들기:
+# request를 받으면 request에 대한 render를 불러오고 index.html을 열어줘
+def index(request):
+    return render(request, 'index.html')
+```
+
+10. templates 폴더생성 
+-> index.html 생성
+
+## MTV
+
