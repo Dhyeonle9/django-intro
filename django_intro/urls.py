@@ -22,5 +22,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('url 주소/', 불러올 함수)
     path('index/', views.index),
-    path('hello/', views.hello),
+    # path('hello/', views.hello),
+    path('dinner/', views.dinner),
+    path('lotto/', views.lotto),
+    path('greeting/<name>/', views.greeting),
+    path('cube/<int:num>/', views.cube),
+    path('posts/', views.posts),
 ]
