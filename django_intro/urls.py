@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('url 주소/', 불러올 함수)
     path('index/', views.index),
+    path('hello/', views.hello),
 ]
