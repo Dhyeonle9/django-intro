@@ -36,7 +36,7 @@ python manage.py runserver
 6. 앱생성
 ```
 django-admin startapp <appname>
-> migrations폴더 - 
+> migrations폴더 생성
 ```
 프로젝트/앱 생성할 때만 django-admin ~
 다른때는 python ~
@@ -49,33 +49,11 @@ django-admin startapp <appname>
 
 ```
 
-8. `urls.py` 수정 (url~ 길잡이, 이정표)
+8. `urls.py` 수정 (u
+rl~ 길잡이, 이정표)
 ```
 from django.urls import path
 <!-- views 모듈 불러오기 -->
 from app_intro import views 
 
-<!-- urlpatterns에 path('index/', views.index) 추가 -->
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    # path('url 주소/', 불러올 함수)
-    path('index/', views.index),
-]
-```
-
-9. `views.py` 수정
-```
-from django.shortcuts import render
-
-
-# index 함수 만들기:
-# request를 받으면 request에 대한 render를 불러오고 index.html을 열어줘
-def index(request):
-    return render(request, 'index.html')
-```
-
-10. templates 폴더생성 
--> index.html 생성
-
-## MTV
-
+<!-- urlpatterns에 path('index/', vi
